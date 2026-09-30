@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #f4f6f9;
+    position: relative;
+    z-index: 1;
+}
+
+/* Background image layer with blur */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/csn_pattern_bg.png');
+    background-repeat: repeat;
+    background-size: 400px 200px;
+    filter: blur(4px);
+    opacity: 0.15;
+    z-index: -1;
+}
+
+header {
+    background-color: #004990;
+    color: #ffffff;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Required to position buttons at the bottom right */
+}
+
+header img {
+    display: block;
+}
+
+/* Nav Buttons Positions the buttons right above the bottom right of the header */
+.nav-buttons {
+    position: absolute;
+    bottom: 12px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    color: white;
+    text-decoration: none;
+    padding: 6px 14px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: white;
+    color: #004990;
+}
+
+/* White box container for the welcome message */
+.welcome-header {
+    background-color: #ffffff !important;
+    padding: 20px 30px;
+    margin: 0px;
+    width: 100%;
+    border-radius: 0px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    text-align: right;
+}
+
+.welcome-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333333;
+    font-family: sans-serif;
+}
+
+.user-name {
+    color: black;
+    font-weight: bold;
+}
+
+/* Upcoming Exams Section*/
+.upcoming-exams {
+    width: 90%;
+    height: 300px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 30px auto;
+}
+
+.cancel-exam  {
+    background-color: #004990;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    align: bottom;
+}
+
+.exam-cards {
+   display: flex;
+   gap: 20px;
+   margin-top: 20px;
+}
+
+.exam-card {
+    border-radius: 5px;
+    border: 2px solid #333333;
+    height: 220px;
+    width: 250px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.exam-card h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.exam-card .exam-info {
+    margin-top: 0;
+    text-align: center;
+    /*position: relative;*/
+}
+
+.exam-card .cancel-exam {
+    margin-top: auto;
+    align-self: center;
+    margin-bottom: 5px;
+    /*position: bottom;
+    margin-top: 35px;
+    margin-left: 60px;*/
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004990;
+    color: white;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
