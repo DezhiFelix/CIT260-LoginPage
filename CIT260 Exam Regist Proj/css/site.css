@@ -1,0 +1,179 @@
+/* VARIABLES FOR COLOR */
+:root {
+    --brand-blue: #2142d4;
+    --brand-blue-dark: #16308f;
+    --border-color: #d7dbe4;
+    --bg-page: #eef0f4;
+    box-sizing: border-box;
+}
+
+/* BANNER SIZE */
+* { box-sizing: inherit; margin: 0; padding: 0; }
+ 
+/* FRONT FROM APPLE - DEFAULT BG COLOR - DEFAULT TXT COLOR */
+html, body {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg-page);
+    color: var(--text-dark);
+}
+
+/* BANNER COLOR + DISPLAY */
+.header {
+    display: flex;
+    background: #002D62;
+}
+
+/* CSN LOGO FOR THE HEADER POSITION */
+.header .logo img {
+    margin-left: 50%;
+}
+
+/* CONTAINER SIZE */
+.container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* STYLE & SIZE FOR THE BACKGROUND IMAGE */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(4px);
+    background-image: url('../assets/csn-logo.png');
+    background-repeat: repeat;
+    background-size: 400px;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+/* STYLE POSITION FOR THE BACKGROUND CONTAINER */
+.container > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* HEADER STYLE FOR THE BANNER */
+.header h1 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(1.6rem, 5vw, 4rem);
+    font-weight: 600;
+    letter-spacing: 4px;
+    padding: 0 16px;
+    padding-right: 250px;
+    
+}
+
+/* STYLE & POS FOR THE CARD */
+.card {
+    position: relative;
+    z-index: 1;
+    background: white;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 360px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px black;
+    padding: 32px 32px 28px;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-self: center;
+}
+
+/* STYLE FOR THE "WELCOME TO CSN EXAM REGISTRATION" HEADER ON THE CARD */
+.card h2 {
+    font-size: 1.50rem;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+ 
+/* SPACING BETWEEN THE INPUT BOXES */
+.field { margin-bottom: 18px; }
+ 
+/* STYLE FOR THE LABELS ON TOP OF THE INPUT BOXES */
+.field label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+ 
+/* SHOW / HIDE PASSWORD BUTTON POSITION */
+.field .input-wrap {
+    position: relative;
+}
+ 
+/* EMAIL & PASSWORD INPUT BOX STYLE */
+.field input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+ 
+/* PLACEHOLDER FOR EMAIL & PASSWORD PLACEHOLDER COLOR */
+.field input::placeholder { color: gray; }
+ 
+/* BOARDER COLOR WHEN YOU SELECT INPUT BOXES */
+.field input:focus {
+    border-color: var(--brand-blue);
+    box-shadow: 0 0 0 1px blue;
+}
+
+/* SHOW OR HIDE PASSWORD TOGGLE */
+.toggle-visibility {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9aa0ac;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 4px;
+}
+ 
+/* SIGN IN BUTTON STYLE */
+.signin-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    background: var(--brand-blue);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.help-txt {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* SIGN IN BUTTON HOVER COLOR */
+.signin-btn:hover { background: var(--brand-blue-dark); }
+
+/* WHEN HOVERING FOOTER LINKS, TEXT DARKEN */
+.note a:hover { color: var(--brand-blue-dark)}
