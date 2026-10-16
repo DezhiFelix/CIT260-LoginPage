@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSN Exam Registration</title>
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+
+<!-- This Is The Header Bar-->
+<header class="topbar">
+    <div class="topbar-inner">
+        <img class=""logo" src="./assets/csn-logo.png" alt="CSN College of Southern Nevada">
+        <p class=""brand">Exam Registration</p>
+
+        <!-- The Place Holder is where User First-Last Name needs to go-->
+        <div class="user">
+            <span class="welcome">Welcome, <placeholder>Jordan Alvarez (placeholder)</placeholder></span>
+
+            <!-- This is Reference button to the Dashboard or Login Screen-->
+            <a class="btn-outline" href="dashboard.html">Home</a>
+            <a class="btn-outline" href="logout">Log out</a>
+        </div>
+    </div>
+</header>
+    
+<main>
+    <h1>Registration Page</h1>
+
+    <form class="card" id="Registration-form" novalidate>
+        <div class="grid">
+
+            <!--Courses Dropdown Selection box-->
+            <div class="field">
+                <label for="course">Course</label>
+
+                <!--Course Selection Dropdown for Registration-->
+                <select id="course" name="course" required>
+                    <option value="">Select a course</option>
+                    <option>Placeholder 1</option>
+                    <option>Placeholder 2</option>
+                </select>
+            </div>
+
+            <!-- Campus or location selection box-->
+            <div class="field">
+                <label for="campus">Campus</label>
+                <select id="campus" name="campus" required>
+                    <option value="">Select a campus</option>
+                    <option>Placeholder 1</option>
+                    <option>Placeholder 2</option>
+                </select>
+            </div>
+
+            <!-- This is a date selection calender-->
+            <div class="field full">
+                <label for="date">Exam date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+        </div>
+
+        <!--After selecting date, this is the available time slots-->
+        <div class="field">
+            <span class="label" id="slots-label">Available time slots</span>
+            <div class="slots" role="group" aria-labelledby="slots-label">
+                <button type="button" class="slot" aria-pressed="false">Placeholder 1</button>
+                <button type="button" class="slot" aria-pressed="false">Placeholder2</button>
+                <button type="button" class="slot" disabled>Placeholder 3 (full)</button>
+            </div>
+        </div>
+
+        <div class="actions">
+            <p class="message" id="message" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn-primary">Confirm</button>
+        </div>
+    </form>
+</main>
+
+<script src="./js/index.js"></script>
+</body>
+</html>
