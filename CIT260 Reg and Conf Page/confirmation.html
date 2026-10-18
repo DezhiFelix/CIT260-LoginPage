@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSN Exam Registration</title>
+<link rel="stylesheet" href="./css/site.css">
+</head>
+<body>
+    
+<header class="topbar">
+  <div class="topbar-inner">
+    <img class="logo" src="./assets/csn-logo.png" alt="CSN College of Southern Nevada">
+    <p class="brand">Exam Registration</p>
+    <div class="user">
+      <span class="welcome">Welcome, <strong>Jordan Alvarez</strong></span>
+      <a class="btn-outline" href="dashboard.html">Home</a>
+      <a class="btn-outline" href="logout">Log out</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h1>Registration confirmed</h1>
+  <div class="card">
+    <dl class="summary">
+      <dt>Course</dt><dd id="c-course"></dd>
+      <dt>Campus</dt><dd id="c-campus"></dd>
+      <dt>Date</dt><dd id="c-date"></dd>
+      <dt>Time</dt><dd id="c-slot"></dd>
+    </dl>
+    <a class="btn-primary" href="dashboard.html" style="text-decoration:none;display:inline-block">Back to home</a>
+  </div>
+</main>
+<script>
+  const r = JSON.parse(sessionStorage.getItem('registration') || 'null');
+  if (!r) { location.href = 'index.html'; }
+  else {
+    document.getElementById('c-course').textContent = r.course;
+    document.getElementById('c-campus').textContent = r.campus;
+    document.getElementById('c-date').textContent = r.date;
+    document.getElementById('c-slot').textContent = r.slot;
+  }
+</script>
+</body>
+</html>
+
