@@ -1,0 +1,42 @@
+:root {
+    /* CSN Dashboard Colors */
+    --primary-blue: #004990;
+    --page-background: #f4f6f9;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+
+    /* Typography */
+    --font-family: Arial, sans-serif;
+
+    /* Corners */
+    --card-radius: 12px;
+    --button-radius: 4px;
+
+    /* Background Pattern */
+    --background-opacity: 0.15;
+    --background-blur: 4px;
+
+    /* Global Page Background */
+body {
+    font-family: var(--font-family);
+    background-color: var(--page-background);
+}
+
+/* Blurred CSN Background Pattern */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url("../images/csn_pattern_bg.png");
+    background-repeat: repeat;
+    background-size: 400px 200px;
+
+    filter: blur(var(--background-blur));
+    opacity: var(--background-opacity);
+
+    pointer-events: none;
+    z-index: -1;
+}
+}

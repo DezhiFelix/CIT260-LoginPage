@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        
+        <link rel="icon" type="image/png" href="../static/images/favicon.png">
+        <title>Dashboard</title>
+        
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/faculty_dashboard.css') }}">
+    </head>
+    <body>
+        
+        <header>
+            <img src="{{ url_for('static', filename='images/csn_logo.png') }}" alt="CSN Logo">
+            <nav class="nav-buttons">
+                <button class="button home-button" type="button"
+                onclick="window.location.href='/faculty/'">Home</button>
+                
+                <button class="button register-button" type="button"
+                onclick="window.location.href='/faculty/exams/'">Exams</button>
+                
+                <button class="button logout-button" type="button"
+                onclick="window.location.href='/'">Logout</button>
+            </nav>
+        
+            
+        </header>
+
+        <section class="welcome-header">
+            <h1>Welcome Proctor</h1>
+        </section>
+
+        <section class="upcoming-exams">
+            <h2>Upcoming Exams</h2>
+            <div class="exam-cards">
+                <div class="exam-card">
+                    <div class="exam-info">                    
+                        <h3>CompTIA A+</h3>
+                        <p>Date: 12/12/2026</p>
+                        <p>Time: 10:00 AM</p>
+                        <p>Campus: Charleston</p>
+                        <p>Building: B</p>
+                        <p>Room: 101</p>
+                    </div>
+                    <button class="view-details">View Details</button>
+                </div>
+                        
+                <div class="exam-card">
+                    <div class="exam-info">
+                        <h3>CompTIA Network+</h3>
+                        <p>Date: 12/16/2026</p>
+                        <p>Time: 10:00 AM</p>
+                        <p>Campus: Charleston</p>
+                        <p>Building: B</p>
+                        <p>Room: 101</p>
+                    </div>
+                    <button class="view-details">View Details</button>
+                </div>
+            
+                <div class="exam-card">
+                    <div class="exam-info">
+                        <h3>CompTIA Security+</h3>
+                        <p>Date: 12/19/2026</p>
+                        <p>Time: 10:00 AM</p>
+                        <p>Campus: Charleston</p>
+                        <p>Building: B</p>
+                        <p>Room: 101</p>
+                    </div>
+                    <button class="view-details">View Details</button>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Need Help? OTS: 702-555-1234 | CSN home page: <a href="https://www.csn.edu" target="_blank"> CSN.edu</a></p>
+            <p>&copy; 2026 Alphafie. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
